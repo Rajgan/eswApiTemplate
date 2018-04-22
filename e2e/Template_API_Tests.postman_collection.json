@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "fe80b533-682f-4d74-b6e1-ce0954ba9dd0",
+		"name": "Template_API_Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Template_Get_Value_API_Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0948950-219c-4a00-ae73-c786284c5333",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"tests[\"value1 returned in response\"] = responseBody.has(\"value1\");",
+							"tests[\"value2 returned in response\"] = responseBody.has(\"value2\");",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"FromAddress\": {\r\n                                \"FirstName\": \"Calvin\",\r\n                                \"LastName\": \"Klein\",\r\n                                \"Email\": \"customerservice-ca@calvinklein.com\",\r\n                                \"Telephone\": \"18003760528\",\r\n                                \"Address1\": \"205 W 39th St\",\r\n                                \"Address2\": null,\r\n                                \"Address3\": null,\r\n                                \"City\": \"New York\",\r\n                                \"Country\": \"United States\",\r\n                                \"CountryCode\": \"US\",\r\n                                \"PostalCode\": \"10018\",\r\n                                \"Region\": \"NY\",\r\n                                \"Unit\": null\r\n                },\r\n                \"ToAddress\": {\r\n                                \"FirstName\": \"Cormac\",\r\n                                \"LastName\": \"Lynch\",\r\n                                \"Email\": \"clynch@eshopworld.com\",\r\n                                \"Telephone\": \"+40722666666\",\r\n                                \"Address1\": \"X\",\r\n                                \"Address2\": null,\r\n                                \"Address3\": null,\r\n                                \"City\": \"X\",\r\n                                \"Country\": \"Canada\",\r\n                                \"CountryCode\": \"CA\",\r\n                                \"PostalCode\": \"L3T 2C0\",\r\n                                \"Region\": \"ON\",\r\n                                \"Unit\": null\r\n                },\r\n                \"LabelFormat\": \"Pdf\",\r\n                \"CurrencyCode\": \"USD\",\r\n                \"Package\": {\r\n                                \"Dimensions\": {\r\n                                                \"ActualWeight\": 68.0,\r\n                                                \"Height\": 50.0,\r\n                                                \"Width\": 50.0,\r\n                                                \"Length\": 50.0,\r\n                                                \"Volume\": 0.0,\r\n                                                \"DimensionalWeight\": 0.0,\r\n                                                \"WeightUnit\": \"KG\",\r\n                                                \"DemensionalUnit\": \"CM\"\r\n                                },\r\n                                \"NumberOfParcels\": 1,\r\n                                \"ContentDescription\": null,\r\n                                \"TypeOfGoods\": \"Apparel\",\r\n                                \"ValueOfPackage\": 131.5400\r\n                },\r\n                \"IsInsuranceRequired\": false,\r\n                \"ExternalReference\": \"Cormac1115\",\r\n                \"CarrierCode\": \"UPS\",\r\n                \"EshopServiceType\": \"Express\",\r\n                \"ClientCode\": \"CKL\",\r\n                \"TermsOfDelivery\": 0,\r\n                \"CashOnDelivery\": null,\r\n                \"SignedOnDelivery\": null\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://10.10.2.26:4441/api/v1.0/values",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"2",
+						"26"
+					],
+					"port": "4441",
+					"path": [
+						"api",
+						"v1.0",
+						"values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template_Get_With_ID_Value_API_Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0948950-219c-4a00-ae73-c786284c5333",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"tests[\"value1 returned in response\"] = responseBody.has(\"value1\");",
+							"tests[\"value2 returned in response\"] = responseBody.has(\"value2\");",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"FromAddress\": {\r\n                                \"FirstName\": \"Calvin\",\r\n                                \"LastName\": \"Klein\",\r\n                                \"Email\": \"customerservice-ca@calvinklein.com\",\r\n                                \"Telephone\": \"18003760528\",\r\n                                \"Address1\": \"205 W 39th St\",\r\n                                \"Address2\": null,\r\n                                \"Address3\": null,\r\n                                \"City\": \"New York\",\r\n                                \"Country\": \"United States\",\r\n                                \"CountryCode\": \"US\",\r\n                                \"PostalCode\": \"10018\",\r\n                                \"Region\": \"NY\",\r\n                                \"Unit\": null\r\n                },\r\n                \"ToAddress\": {\r\n                                \"FirstName\": \"Cormac\",\r\n                                \"LastName\": \"Lynch\",\r\n                                \"Email\": \"clynch@eshopworld.com\",\r\n                                \"Telephone\": \"+40722666666\",\r\n                                \"Address1\": \"X\",\r\n                                \"Address2\": null,\r\n                                \"Address3\": null,\r\n                                \"City\": \"X\",\r\n                                \"Country\": \"Canada\",\r\n                                \"CountryCode\": \"CA\",\r\n                                \"PostalCode\": \"L3T 2C0\",\r\n                                \"Region\": \"ON\",\r\n                                \"Unit\": null\r\n                },\r\n                \"LabelFormat\": \"Pdf\",\r\n                \"CurrencyCode\": \"USD\",\r\n                \"Package\": {\r\n                                \"Dimensions\": {\r\n                                                \"ActualWeight\": 68.0,\r\n                                                \"Height\": 50.0,\r\n                                                \"Width\": 50.0,\r\n                                                \"Length\": 50.0,\r\n                                                \"Volume\": 0.0,\r\n                                                \"DimensionalWeight\": 0.0,\r\n                                                \"WeightUnit\": \"KG\",\r\n                                                \"DemensionalUnit\": \"CM\"\r\n                                },\r\n                                \"NumberOfParcels\": 1,\r\n                                \"ContentDescription\": null,\r\n                                \"TypeOfGoods\": \"Apparel\",\r\n                                \"ValueOfPackage\": 131.5400\r\n                },\r\n                \"IsInsuranceRequired\": false,\r\n                \"ExternalReference\": \"Cormac1115\",\r\n                \"CarrierCode\": \"UPS\",\r\n                \"EshopServiceType\": \"Express\",\r\n                \"ClientCode\": \"CKL\",\r\n                \"TermsOfDelivery\": 0,\r\n                \"CashOnDelivery\": null,\r\n                \"SignedOnDelivery\": null\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://10.10.2.26:4441/api/v1.0/values",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"2",
+						"26"
+					],
+					"port": "4441",
+					"path": [
+						"api",
+						"v1.0",
+						"values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template_Post_Value_API_Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "64f83441-cc84-4725-8d65-07db499b0a38",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"tests[\"Carrier Code correct\"] = responseBody.has(\"Test Code\");",
+							"tests[\"Carrier Name correct\"] = responseBody.has(\"Test Name\");",
+							"tests[\"Carrier Prefix correct\"] = responseBody.has(\"Test Prefix\");",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clientCode\": \"string\",\r\n  \"clientNo\": 1,\r\n  \"prefix\": \"string\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://10.10.2.26:4441/api/v1.0/values",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"2",
+						"26"
+					],
+					"port": "4441",
+					"path": [
+						"api",
+						"v1.0",
+						"values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template_Put_Value_API_Test Copy Copy Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2e3c46e5-c612-4332-bb2e-bf3015ce9475",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"tests[\"Carrier Code correct\"] = responseBody.has(\"Test Code\");",
+							"tests[\"Carrier Name correct\"] = responseBody.has(\"Test Name\");",
+							"tests[\"Carrier Prefix correct\"] = responseBody.has(\"Test Prefix\");",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clientCode\": \"string\",\r\n  \"clientNo\": 1,\r\n  \"prefix\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "http://10.10.2.26:4441/api/v1.0/values/1",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"2",
+						"26"
+					],
+					"port": "4441",
+					"path": [
+						"api",
+						"v1.0",
+						"values",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Template_Delete_Value_API_Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8d9dec9-0815-43f1-a539-ac68325e8299",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n"
+				},
+				"url": {
+					"raw": "http://10.10.2.26:4441/api/v1.0/values/1",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"2",
+						"26"
+					],
+					"port": "4441",
+					"path": [
+						"api",
+						"v1.0",
+						"values",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ZZ_Template_Secure_Get_Value_API_Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0948950-219c-4a00-ae73-c786284c5333",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"tests[\"value1 returned in response\"] = responseBody.has(\"value1\");",
+							"tests[\"value2 returned in response\"] = responseBody.has(\"value2\");",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n                \"FromAddress\": {\r\n                                \"FirstName\": \"Calvin\",\r\n                                \"LastName\": \"Klein\",\r\n                                \"Email\": \"customerservice-ca@calvinklein.com\",\r\n                                \"Telephone\": \"18003760528\",\r\n                                \"Address1\": \"205 W 39th St\",\r\n                                \"Address2\": null,\r\n                                \"Address3\": null,\r\n                                \"City\": \"New York\",\r\n                                \"Country\": \"United States\",\r\n                                \"CountryCode\": \"US\",\r\n                                \"PostalCode\": \"10018\",\r\n                                \"Region\": \"NY\",\r\n                                \"Unit\": null\r\n                },\r\n                \"ToAddress\": {\r\n                                \"FirstName\": \"Cormac\",\r\n                                \"LastName\": \"Lynch\",\r\n                                \"Email\": \"clynch@eshopworld.com\",\r\n                                \"Telephone\": \"+40722666666\",\r\n                                \"Address1\": \"X\",\r\n                                \"Address2\": null,\r\n                                \"Address3\": null,\r\n                                \"City\": \"X\",\r\n                                \"Country\": \"Canada\",\r\n                                \"CountryCode\": \"CA\",\r\n                                \"PostalCode\": \"L3T 2C0\",\r\n                                \"Region\": \"ON\",\r\n                                \"Unit\": null\r\n                },\r\n                \"LabelFormat\": \"Pdf\",\r\n                \"CurrencyCode\": \"USD\",\r\n                \"Package\": {\r\n                                \"Dimensions\": {\r\n                                                \"ActualWeight\": 68.0,\r\n                                                \"Height\": 50.0,\r\n                                                \"Width\": 50.0,\r\n                                                \"Length\": 50.0,\r\n                                                \"Volume\": 0.0,\r\n                                                \"DimensionalWeight\": 0.0,\r\n                                                \"WeightUnit\": \"KG\",\r\n                                                \"DemensionalUnit\": \"CM\"\r\n                                },\r\n                                \"NumberOfParcels\": 1,\r\n                                \"ContentDescription\": null,\r\n                                \"TypeOfGoods\": \"Apparel\",\r\n                                \"ValueOfPackage\": 131.5400\r\n                },\r\n                \"IsInsuranceRequired\": false,\r\n                \"ExternalReference\": \"Cormac1115\",\r\n                \"CarrierCode\": \"UPS\",\r\n                \"EshopServiceType\": \"Express\",\r\n                \"ClientCode\": \"CKL\",\r\n                \"TermsOfDelivery\": 0,\r\n                \"CashOnDelivery\": null,\r\n                \"SignedOnDelivery\": null\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://10.10.2.26:4441/api/v1.0/values",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"2",
+						"26"
+					],
+					"port": "4441",
+					"path": [
+						"api",
+						"v1.0",
+						"values"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

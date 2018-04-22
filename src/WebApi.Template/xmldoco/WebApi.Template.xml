@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi.Template</name>
+    </assembly>
+    <members>
+        <member name="T:Labelling.Common.Extensions.ErrorsExtensions">
+            <summary>
+            Extension Method to add Errors
+            </summary>
+        </member>
+        <member name="T:WebApi.Template.Controllers.SecuredController">
+            <summary>
+            sample controller
+            </summary>
+        </member>
+        <member name="M:WebApi.Template.Controllers.SecuredController.Get">
+            <summary>
+            GET implementation for default route
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Template.Controllers.SecuredController.Get(System.Int32)">
+            <summary>
+            Get with Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Template.Controllers.SecuredController.Post(System.String)">
+            <summary>
+            post
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:WebApi.Template.Controllers.SecuredController.Put(System.Int32,System.String)">
+            <summary>
+            Put
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:WebApi.Template.Controllers.SecuredController.Delete(System.Int32)">
+            <summary>
+            Delete
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:WebApi.Template.Controllers.ValuesController">
+            <summary>
+            sample controller
+            </summary>
+        </member>
+        <member name="M:WebApi.Template.Controllers.ValuesController.Get">
+            <summary>
+            GET implementation for default route
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Template.Controllers.ValuesController.Get(System.Int32)">
+            <summary>
+            Get with Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Template.Controllers.ValuesController.Post(WebApi.Template.Model.DTO.SampleRequest)">
+            <summary>
+            post
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:WebApi.Template.Controllers.ValuesController.Put(System.Int32,WebApi.Template.Model.DTO.SampleRequest)">
+            <summary>
+            Put
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:WebApi.Template.Controllers.ValuesController.Delete(System.Int32)">
+            <summary>
+            Delete
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:WebApi.Template.Infrastructure.ServiceConfigurationOption.RequiredScopes">
+            <summary>
+            The scopes to assert on the Api
+            </summary>
+        </member>
+        <member name="P:WebApi.Template.Infrastructure.ServiceConfigurationOption.Authority">
+            <summary>
+            The Authority base address
+            </summary>
+        </member>
+        <member name="P:WebApi.Template.Infrastructure.ServiceConfigurationOption.ApiName">
+            <summary>
+            The Api name
+            </summary>
+        </member>
+        <member name="P:WebApi.Template.Infrastructure.ServiceConfigurationOption.ApiSecret">
+            <summary>
+            The Api secret
+            </summary>
+        </member>
+        <member name="P:WebApi.Template.Infrastructure.ServiceConfigurationOption.IsHttps">
+            <summary>
+            Indicates if the service should require https
+            </summary>
+        </member>
+        <member name="M:WebApi.Template.Infrastructure.Middleware.ErrorHandlingMiddleware.GetTelemetryOperationId(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Get Operation Id from HttpContext Object
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WebApi.Template.Model.ApiErrorResponse.ErrorType">
+            <summary>
+            Determine what type of Error Business error OR Validation Error OR InternalServer Error
+            </summary>
+        </member>
+        <member name="P:WebApi.Template.Model.ApiErrorResponse.ErrorDetails">
+            <summary>
+            Hold Error information
+            </summary>
+        </member>
+        <member name="P:WebApi.Template.Model.ApiErrorResponse.ErrorIdentifier">
+            <summary>
+            Populate ErrorIdentifier with Application Insight Opertion Id
+            </summary>
+        </member>
+        <member name="P:WebApi.Template.Model.Exceptions.Error.ErrorKey">
+            <summary>
+            Holds Field Name for Validation Exception, 
+            Operation Name for Business exception
+            </summary>
+        </member>
+        <member name="P:WebApi.Template.Model.Exceptions.Error.ErrorCode">
+            <summary>
+            Code which will be Identify by UI [Can be used for Transalations]
+            </summary>
+        </member>
+        <member name="P:WebApi.Template.Model.Exceptions.Error.ErrorMessage">
+            <summary>
+            Populate Exact Error Message
+            </summary>
+        </member>
+        <member name="M:WebApi.Template.Program.Main">
+            <summary>
+            This is the entry point of the service host process.
+            </summary>
+        </member>
+        <member name="T:WebApi.Template.Startup">
+            <summary>
+            Startup class for ASP.NET runtime
+            </summary>
+        </member>
+        <member name="M:WebApi.Template.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="env">hosting environment</param>
+        </member>
+        <member name="M:WebApi.Template.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            configure services to be used by the asp.net runtime
+            </summary>
+            <param name="services">service collection</param>
+            <returns>service provider instance (Autofac provider)</returns>
+        </member>
+        <member name="M:WebApi.Template.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            configure asp.net pipeline
+            </summary>
+            <param name="app">application builder</param>
+            <param name="env">environment</param>
+        </member>
+        <member name="T:WebApi.Template.Validations.BaseValidator`1">
+            <summary>
+            Base Validator and Interceptor to handle Validation Error
+            </summary>
+            <typeparam name="TRequest"></typeparam>
+        </member>
+        <member name="T:WebApi.Template.WebApiTemplateService">
+            <summary>
+            The FabricRuntime creates an instance of this class for each service type instance. 
+            </summary>
+        </member>
+        <member name="M:WebApi.Template.WebApiTemplateService.CreateServiceInstanceListeners">
+            <summary>
+            Optional override to create listeners (like tcp, http) for this service instance.
+            </summary>
+            <returns>The collection of listeners.</returns>
+        </member>
+    </members>
+</doc>
