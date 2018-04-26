@@ -1,24 +1,21 @@
 ﻿using System.Collections.Generic;
 using WebApi.Template.Model.Exceptions;
 
-namespace Labelling.Common.Extensions
+namespace WebApi.Template.Common.Extensions
 {
     /// <summary>
     /// Extension Method to add Errors
     /// </summary>
     public static class ErrorsExtensions
     {
-        public static T AddErrors<T>(this T exception, Error error) where T : BaseException
+        public static List<Error> ToErrorList(this Error error)
         {
-            exception.Errors.Add(error);
-            return exception;
-        }
+            var errorList = new List<Error>()
+            {
+                new Error(){ErrorMessage = error.ErrorMessage,ErrorCode = error.ErrorCode,ErrorKey = error.ErrorKey}
+            };
 
-        public static T AddErrorList<T>(this T exception, IList<Error> errorList) where T : BaseException
-        {
-            exception.Errors.AddRange(errorList);
-            return exception;
+            return errorList;
         }
-        
     }
 }

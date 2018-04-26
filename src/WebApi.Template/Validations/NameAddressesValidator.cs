@@ -3,7 +3,7 @@ using WebApi.Template.Model.Domain;
 
 namespace WebApi.Template.Validations
 {
-    public class NameAddressesValidator : BaseValidator<NameAddresses>
+    public class NameAddressesValidator : AbstractValidator<NameAddresses>
     {
         public NameAddressesValidator()
         {

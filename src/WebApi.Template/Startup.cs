@@ -7,10 +7,12 @@ using Eshopworld.Web;
 using Eshopworld.Telemetry;
 using FluentValidation.AspNetCore;
 using IdentityServer4.AccessTokenValidation;
+using Microsoft.ApplicationInsights.DataContracts;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +23,6 @@ using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 using WebApi.Template.DataAccess;
 using WebApi.Template.Infrastructure;
-using WebApi.Template.Infrastructure.Middleware;
 using WebApi.Template.Validations;
 
 namespace WebApi.Template
@@ -114,7 +115,7 @@ namespace WebApi.Template
                 builder.Populate(services);
                 builder.RegisterInstance(_bb).As<IBigBrother>().SingleInstance();
                 builder.RegisterInstance(AppSettings).AsSelf().SingleInstance();
-
+                
                 // add additional services or modules into container here
 
                 var container = builder.Build();
@@ -145,7 +146,6 @@ namespace WebApi.Template
            {
                app.UseBigBrotherExceptionHandler();
            }
-           app.UseMiddleware<ErrorHandlingMiddleware>();
             app.UseCors("CorsPolicy");
             app.UseSwagger(o => o.RouteTemplate="swagger/{documentName}/swagger.json");
             app.UseSwaggerUI(o =>

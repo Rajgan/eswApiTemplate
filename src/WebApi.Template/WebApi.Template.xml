@@ -4,7 +4,7 @@
         <name>WebApi.Template</name>
     </assembly>
     <members>
-        <member name="T:Labelling.Common.Extensions.ErrorsExtensions">
+        <member name="T:WebApi.Template.Common.Extensions.ErrorsExtensions">
             <summary>
             Extension Method to add Errors
             </summary>
@@ -108,13 +108,6 @@
             Indicates if the service should require https
             </summary>
         </member>
-        <member name="M:WebApi.Template.Infrastructure.Middleware.ErrorHandlingMiddleware.GetTelemetryOperationId(Microsoft.AspNetCore.Http.HttpContext)">
-            <summary>
-            Get Operation Id from HttpContext Object
-            </summary>
-            <param name="context"></param>
-            <returns></returns>
-        </member>
         <member name="P:WebApi.Template.Model.ApiErrorResponse.ErrorType">
             <summary>
             Determine what type of Error Business error OR Validation Error OR InternalServer Error
@@ -175,12 +168,6 @@
             </summary>
             <param name="app">application builder</param>
             <param name="env">environment</param>
-        </member>
-        <member name="T:WebApi.Template.Validations.BaseValidator`1">
-            <summary>
-            Base Validator and Interceptor to handle Validation Error
-            </summary>
-            <typeparam name="TRequest"></typeparam>
         </member>
         <member name="T:WebApi.Template.WebApiTemplateService">
             <summary>

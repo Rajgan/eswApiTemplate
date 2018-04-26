@@ -4,7 +4,7 @@ using WebApi.Template.Model.Exceptions;
 
 namespace WebApi.Template.Model
 {
-    public class ApiErrorResponse
+    public class ApiErrorResponse 
     {
         /// <summary>
         /// Determine what type of Error Business error OR Validation Error OR InternalServer Error
@@ -19,6 +19,6 @@ namespace WebApi.Template.Model
         /// Populate ErrorIdentifier with Application Insight Opertion Id
         /// </summary>
         public string ErrorIdentifier { get; set; }
-
+        
     }
 }
